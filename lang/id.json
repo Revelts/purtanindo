@@ -1,0 +1,148 @@
+{
+    "HEADING": "Memberdayakan Inovasi, Mengoptimalkan Solusi",
+    "SUBHEADING": "Tingkatkan bisnis Anda dengan Digitalisasi",
+    "ABOUT": {
+      "HEADING": "Tentang Kami",
+      "TITLE": "Di Purtanindo, kami tidak hanya menyelesaikan masalah IT—kami menciptakan kemungkinan digital!",
+      "DESCRIPTION": "Tim ahli kami selalu berinovasi, selalu menyusun strategi, dan selalu berpikir ke depan. Dengan hasrat terhadap teknologi dan pemahaman mendalam tentang kebutuhan industri, kami merancang solusi IT yang mendorong pertumbuhan dan kesuksesan nyata. Kami di sini untuk membawa bisnis Anda ke masa depan dengan transformasi digital yang cerdas. Baik itu mengoptimalkan sistem, menyederhanakan operasi, atau merintis solusi teknologi baru, Purtanindo adalah mitra terpercaya Anda dalam menavigasi era digital. Mari bangun sesuatu yang luar biasa—bersama."
+    },
+    "SERVICES": {
+      "HEADING": "Layanan Kami",
+      "DESCRIPTION": "Kami menciptakan solusi digital berkualitas tinggi dan produk inovatif yang disesuaikan dengan kebutuhan Anda. Selain pengembangan, kami menawarkan berbagai layanan TI profesional untuk membantu bisnis Anda berkembang. Dengan komitmen terhadap keunggulan, kami menghadirkan solusi kelas dunia yang mendorong pertumbuhan, efisiensi, dan kesuksesan bagi klien kami.",
+      "SERVICES": [
+        {
+          "TITLE": "Pengembangan Aplikasi Web",
+          "ICON": "fa fa-laptop",
+          "CLASS": "feature_box_col_one",
+          "DETAILS": [
+            "Pengembangan full-stack (Front-end & Back-end)",
+            "UI/UX responsif dan ramah pengguna",
+            "Solusi server-side yang skalabel dan aman",
+            "Optimasi dan peningkatan aplikasi yang sudah ada",
+            "Solusi tingkat perusahaan yang disesuaikan"
+          ]
+        },
+        {
+          "TITLE": "Pengembangan Aplikasi Mobile",
+          "ICON": "fa fa-android",
+          "CLASS": "feature_box_col_two",
+          "DETAILS": [
+            "Pengembangan aplikasi Android & iOS",
+            "Solusi lintas platform (Flutter, Xamarin, React Native)",
+            "Pengalaman pengguna yang mulus dan konsisten",
+            "Dioptimalkan untuk kinerja dan skalabilitas"
+          ]
+        },
+        {
+          "TITLE": "Solusi Perangkat Lunak & Perusahaan",
+          "ICON": "fa fa-magic",
+          "CLASS": "feature_box_col_three",
+          "DETAILS": [
+            "Pengembangan ERP dan CRM kustom",
+            "Otomatisasi dan optimasi alur kerja",
+            "Integrasi alat pihak ketiga yang mulus",
+            "Meningkatkan efisiensi dan pertumbuhan bisnis"
+          ]
+        },
+        {
+          "TITLE": "Pemasaran Digital",
+          "ICON": "fa fa-audio-description",
+          "CLASS": "feature_box_col_four",
+          "DETAILS": [
+            "Pemasaran Media Sosial (SMM)",
+            "Pemasaran Konten & Blogging",
+            "Optimasi Mesin Pencari (SEO)",
+            "Pemasaran Video"
+          ]
+        }
+      ]
+  },
+  "COUNTERS": [
+    {
+      "ICON": "far fa-clock",
+      "TARGET": 1000,
+      "TEXT": "Working Hours"
+    },
+    {
+      "ICON": "fas fa-gift",
+      "TARGET": 5,
+      "TEXT": "Completed Projects"
+    },
+    {
+      "ICON": "fas fa-users",
+      "TARGET": 3,
+      "TEXT": "Happy Clients"
+    },
+    {
+      "ICON": "fas fa-award",
+      "TARGET": 0,
+      "TEXT": "Awards Received"
+    }
+  ],
+  "PORTFOLIO": {
+    "TITLE": "<span>Proyek</span> Kami",
+    "DESCRIPTION": "Kami berkomitmen untuk mendorong inovasi dan pertumbuhan melalui teknologi. Proyek kami berfokus pada memberikan solusi canggih untuk bisnis serta memberdayakan profesional muda dengan keterampilan industri yang relevan, membantu mereka mendapatkan peluang yang lebih baik di era digital.",
+    "PROJECTS": [
+      {
+        "ICON": "fa fa-database",
+        "TITLE": "TBD",
+        "DESCRIPTION": "-",
+        "CLASS": "feature_box_col_one"
+      },
+      {
+        "ICON": "fa fa-upload",
+        "TITLE": "TBD",
+        "DESCRIPTION": "-",
+        "CLASS": "feature_box_col_two"
+      },
+      {
+        "ICON": "fa fa-camera",
+        "TITLE": "TBD",
+        "DESCRIPTION": "-",
+        "CLASS": "feature_box_col_three"
+      }
+    ]
+  },
+  "COMMUNICATE": {
+    "TITLE": "Punya proyek atau butuh solusi IT yang ahli?",
+    "DESCRIPTION": "Hubungi kami hari ini, dan mari kita bangun sesuatu yang luar biasa bersama! 🚀",
+    "BUTTON": "Hubungi Kami"
+  },
+  "FAQ": {
+    "TITLE": "FAQ",
+    "QUESTIONS": [
+      {
+        "QUESTION": "Berapa biaya yang dibutuhkan?",
+        "ANSWER": "Biaya tergantung pada kebutuhan Anda. Hubungi kami, dan kami akan menanyakan tentang proyek, kebutuhan desain, dan fitur yang Anda perlukan. Setelah itu, kami dapat memberikan perkiraan harga. Jika Anda tertarik, kami akan mengunjungi bisnis Anda dan memberikan penawaran akhir."
+      },
+      {
+        "QUESTION": "Berapa lama waktu yang dibutuhkan untuk mendesain situs web?",
+        "ANSWER": "Waktu pengerjaan tergantung pada Anda. Jika Anda memiliki tenggat waktu, kami akan berusaha sebaik mungkin untuk memenuhinya. Penundaan terbesar biasanya terjadi saat kami menunggu konten dari Anda."
+      },
+      {
+        "QUESTION": "Bagaimana saya bisa bekerja dengan perusahaan IT Anda?",
+        "ANSWER": "Mulailah dengan menghubungi kami dan menyampaikan kebutuhan Anda. Kami akan meninjaunya dan mendiskusikan cara terbaik untuk melanjutkan. Setelah sepakat, kami akan mulai mengembangkan proyek Anda."
+      },
+      {
+        "QUESTION": "Bisakah Anda meningkatkan tampilan situs web saya saat ini?",
+        "ANSWER": "Tentu! Beri tahu kami apa yang Anda butuhkan, dan tim kami yang berpengalaman akan memberikan tampilan yang segar dan profesional untuk situs web Anda."
+      },
+      {
+        "QUESTION": "Kapan saya harus melakukan pembayaran?",
+        "ANSWER": "Untuk sebagian besar proyek, pembayaran dibagi menjadi tiga tahap: di awal, di tengah, dan di akhir. Kami juga dapat membuat rencana pembayaran yang sesuai dengan Anda. Kami menerima transfer bank dan kredit."
+      }
+    ]
+  },
+  "NAVBAR": {
+    "HOME": "🏠 Beranda",
+    "ABOUT": "ℹ Tentang Kami",
+    "SERVICES": "💻 Layanan",
+    "PORTFOLIO": "📂 Portofolio",
+    "TEAM": "👥 Tim Kami",
+    "MANAGEMENT": "🏢 Manajemen",
+    "CONTACT": "📞 Kontak",
+    "FAQ": "📚 FAQ",
+    "LANGUAGE": "Bahasa"
+  } 
+}
+  
