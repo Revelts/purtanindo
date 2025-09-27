@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "framework": "nextjs",
+    "build": {
+      "env": {
+        "NODE_OPTIONS": "--openssl-legacy-provider"
+      }
+    }
+}
+  

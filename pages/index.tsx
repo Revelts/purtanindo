@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SEO from '../components/SEO';
 import { useEffect, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -60,13 +61,26 @@ export default function HomePage() {
 
 	return (
 		<>
-            <Head>
-				<title>Purtanindo | IT Consultant, Web Development, SEO & Digital Solutions</title>
+			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href={'/images/favicon.ico'} />
-                <meta name="robots" content="index,follow" />
-                <meta name="keywords" content="Purtanindo, IT consultant, web development, mobile development, SEO, digital solutions, Jakarta" />
 			</Head>
+			<SEO
+				title="Purtanindo | IT Consultant, Web Development, SEO & Digital Solutions"
+				description="We craft high‑quality digital products and provide professional IT services to help your business thrive."
+				keywords={[
+					'Purtanindo',
+					'IT consultant',
+					'web development',
+					'mobile development',
+					'SEO',
+					'digital solutions',
+					'Jakarta',
+				]}
+				url="/"
+				image="/images/purtanindo-colored.webp"
+				canonical="/"
+			/>
 			<Header lang={lang} setLang={setLang} nav={{
 				HOME: lang === 'id' ? 'Beranda' : 'Home',
 				GROUP_ABOUT: lang === 'id' ? 'Tentang' : 'About',

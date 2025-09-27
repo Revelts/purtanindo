@@ -1,16 +1,16 @@
 {
   "components\\Contact.tsx -> emailjs-com": {
-    "id": "components\\Contact.tsx -> emailjs-com",
+    "id": 9101,
     "files": [
-      "static/chunks/node_modules_emailjs-com_es_index_js.js"
+      "static/chunks/101.1f71ace690470a92.js"
     ]
   },
   "pages\\index.tsx -> ../lang/en.json": {
-    "id": "pages\\index.tsx -> ../lang/en.json",
+    "id": 4798,
     "files": []
   },
   "pages\\index.tsx -> ../lang/id.json": {
-    "id": "pages\\index.tsx -> ../lang/id.json",
+    "id": 711,
     "files": []
   }
 }
