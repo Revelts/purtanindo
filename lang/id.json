@@ -108,6 +108,30 @@
     "DESCRIPTION": "Hubungi kami hari ini, dan mari kita bangun sesuatu yang luar biasa bersama! 🚀",
     "BUTTON": "Hubungi Kami"
   },
+  "GALLERY": {
+    "TITLE": "Galeri",
+    "DESCRIPTION": "Mengabadikan momen tak terlupakan bersama klien kami—di mana kolaborasi, inovasi, dan kesuksesan berpadu."
+  },
+  "MANAGEMENTS": {
+    "TITLE": "Meet Our Managements",
+    "ITEMS": [
+      {
+        "name": "Sion Purba S.E",
+        "role": "Komisioner",
+        "desc": "Memandu dengan visi dan integritas, saya memastikan pertumbuhan strategis dan kesuksesan jangka panjang bagi perusahaan serta para pemangku kepentingan kami."
+      },
+      {
+        "name": "Leynardo Yosef S.Kom",
+        "role": "Chief Executive Officer (CEO)",
+        "desc": "Saya merasa terhormat memimpin perusahaan yang dibangun di atas inovasi, integritas, dan keunggulan. Visi kami adalah menetapkan standar industri baru melalui kualitas dan komitmen terhadap kemajuan."
+      },
+      {
+        "name": "Maria Bellen S.M",
+        "role": "Chief Media Officer (CMO)",
+        "desc": "Berkomitmen pada inovasi dan dampak, saya memimpin strategi media kami untuk mendorong keterlibatan, keunggulan, dan pertumbuhan industri."
+      }
+    ]
+  },
   "FAQ": {
     "TITLE": "FAQ",
     "QUESTIONS": [

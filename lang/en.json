@@ -108,6 +108,30 @@
     "DESCRIPTION": "Reach out to us today, and let's build something great together! 🚀",
     "BUTTON": "Get in Touch"
   },
+  "GALLERY": {
+    "TITLE": "Gallery",
+    "DESCRIPTION": "Capturing unforgettable moments with our clients—where collaboration, innovation, and success come together."
+  },
+  "MANAGEMENTS": {
+    "TITLE": "Meet Our Managements",
+    "ITEMS": [
+      {
+        "name": "Sion Purba S.E",
+        "role": "Commissioner",
+        "desc": "Guiding with vision and integrity, I ensure strategic growth and long-term success for the company and our stakeholders."
+      },
+      {
+        "name": "Leynardo Yosef S.Kom",
+        "role": "Chief Executive Officer (CEO)",
+        "desc": "I am honored to lead a company built on innovation, integrity, and excellence. Our vision is to set new industry standards through quality and commitment to progress."
+      },
+      {
+        "name": "Maria Bellen S.M",
+        "role": "Chief Media Officer (CMO)",
+        "desc": "Committed to innovation and impact, I lead our media strategy to drive engagement, excellence, and industry growth."
+      }
+    ]
+  },
   "FAQ": {
     "TITLE": "FAQ",
     "QUESTIONS": [

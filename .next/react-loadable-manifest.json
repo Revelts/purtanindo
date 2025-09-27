@@ -1,0 +1,16 @@
+{
+  "components\\Contact.tsx -> emailjs-com": {
+    "id": "components\\Contact.tsx -> emailjs-com",
+    "files": [
+      "static/chunks/node_modules_emailjs-com_es_index_js.js"
+    ]
+  },
+  "pages\\index.tsx -> ../lang/en.json": {
+    "id": "pages\\index.tsx -> ../lang/en.json",
+    "files": []
+  },
+  "pages\\index.tsx -> ../lang/id.json": {
+    "id": "pages\\index.tsx -> ../lang/id.json",
+    "files": []
+  }
+}
