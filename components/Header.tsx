@@ -75,12 +75,12 @@ export default function Header({ lang, setLang, nav }: { lang: 'id' | 'en'; setL
 						<div className="hidden md:block invisible md:group-hover:visible md:group-hover:opacity-100 md:group-focus-within:visible md:group-focus-within:opacity-100 absolute left-0 top-full bg-white text-slate-800 rounded shadow w-48 transition-opacity">
 							<a href="#contact" className="block px-4 py-2 hover:bg-slate-50">{nav.CONTACT}</a>
 							<a href="#faq" className="block px-4 py-2 hover:bg-slate-50">{nav.FAQ}</a>
-                    <a href="/download-cv" download="profile.pdf" className="block px-4 py-2 hover:bg-slate-50">{nav.DOWNLOAD}</a>
+                    <a href="/api/download-cv" className="block px-4 py-2 hover:bg-slate-50">{nav.DOWNLOAD}</a>
 						</div>
 						<div className={`md:hidden w-full pl-2 space-y-1 ${mobileSections.contact ? 'block' : 'hidden'}`}>
 							<a href="#contact" className="block px-2 py-1">{nav.CONTACT}</a>
 							<a href="#faq" className="block px-2 py-1">{nav.FAQ}</a>
-                    <a href="/download-cv" download="profile.pdf" className="block px-2 py-1">{nav.DOWNLOAD}</a>
+                    <a href="/api/download-cv" className="block px-2 py-1">{nav.DOWNLOAD}</a>
 						</div>
 					</li>
 					<li className="relative">
