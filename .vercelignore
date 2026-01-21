@@ -1,0 +1,33 @@
+# Files and folders to ignore during Vercel deployment
+
+# Documentation
+*.md
+!README.md
+
+# Development files
+.vscode
+.idea
+*.code-workspace
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+__tests__
+__mocks__
+
+# Local environment
+.env.local
+.env.development
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore

@@ -74,9 +74,13 @@ purtanindo/
 ### ✅ Performance
 - Server Components by default
 - Client Components only when needed
-- Optimized images
-- Fast page loads
+- Optimized images with next/image
+- Fast page loads with code splitting
 - Lighthouse-friendly
+- Automatic bundle chunking
+- Dynamic imports for below-the-fold content
+- Optimized font loading with next/font
+- Standalone output for efficient deployment
 
 ### ✅ Business Features
 - Landing page dengan Hero section
@@ -112,24 +116,93 @@ Buka [http://localhost:3000](http://localhost:3000) di browser.
 ### Build for Production
 
 ```bash
+# Standard production build
 npm run build
+
+# Build with bundle analysis
+npm run analyze
+
+# Start production server locally
 npm start
 ```
 
+### 🎯 Build Optimizations
+
+Website ini sudah dioptimasi untuk production dengan:
+
+#### Code Splitting & Chunking
+- **Vendor chunks**: Library node_modules dipisah ke chunk terpisah
+- **Icon chunks**: React icons dalam chunk dedicated untuk lazy loading
+- **Common chunks**: Shared code otomatis di-extract untuk reusability
+- **Dynamic imports**: Section below-the-fold (FAQ, Testimonials, CTA) di-lazy load
+
+#### Bundle Size Optimization
+- `react-icons` dioptimasi dengan package imports
+- Standalone output untuk deployment lebih ringan
+- Tree-shaking otomatis untuk unused code
+- SWC minification untuk bundle size minimal
+
+#### Caching Strategy
+- Static assets: `max-age=31536000` (1 tahun)
+- Images: optimized dengan AVIF/WebP
+- Font: preload dengan `display: swap`
+
 ## 🚀 Deployment
 
-Project ini sudah ready untuk deploy ke Vercel:
+### Vercel (Recommended)
 
+Project ini sudah production-ready untuk Vercel dengan konfigurasi optimal:
+
+#### Via Vercel Dashboard
 1. Push code ke GitHub
-2. Import project di Vercel
-3. Deploy otomatis akan berjalan
+2. Import project di [vercel.com](https://vercel.com)
+3. Vercel otomatis detect Next.js dan deploy
+4. Environment variables (optional):
+   - `NEXT_PUBLIC_SITE_URL`
+   - `NEXT_PUBLIC_GA_ID` (jika pakai Google Analytics)
 
-Atau gunakan Vercel CLI:
-
+#### Via Vercel CLI
 ```bash
+# Install Vercel CLI
 npm install -g vercel
-vercel
+
+# Login
+vercel login
+
+# Deploy to production
+vercel --prod
 ```
+
+### Configuration Files
+
+- **`next.config.mjs`**: Next.js config dengan webpack optimization
+- **`vercel.json`**: Vercel-specific settings (region: Singapore, caching headers)
+- **`.vercelignore`**: Files to exclude from deployment
+
+### Deployment Features
+
+✅ **Automatic optimizations**:
+- Edge caching untuk static assets
+- Image optimization dengan Next.js Image API
+- Automatic HTTPS
+- Global CDN
+- Zero-config deployment
+
+✅ **Performance monitoring**:
+- Web Vitals tracking
+- Real-time analytics
+- Deployment previews per PR
+
+### Post-Deployment Checklist
+
+- [ ] Verify all pages load correctly
+- [ ] Test WhatsApp button integration
+- [ ] Check images loading properly
+- [ ] Validate sitemap at `/sitemap.xml`
+- [ ] Test responsive design on mobile
+- [ ] Run Lighthouse audit (aim for 90+ score)
+- [ ] Setup custom domain (if applicable)
+- [ ] Configure Analytics (optional)
 
 ## 📝 Content Management
 
