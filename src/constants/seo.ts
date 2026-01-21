@@ -86,7 +86,7 @@ export const DEFAULT_METADATA: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'google-site-verification=03JacJ3nukN95mePnMzpmEKUElF3XX8NFIiAFXEwhQE',
   },
 };
 
