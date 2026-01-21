@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"components\\\\Contact.tsx -> emailjs-com":{"id":9101,"files":["static/chunks/101.1f71ace690470a92.js"]},"pages\\\\index.tsx -> ../lang/en.json":{"id":4798,"files":[]},"pages\\\\index.tsx -> ../lang/id.json":{"id":711,"files":[]}}';
+self.__REACT_LOADABLE_MANIFEST="{}"
