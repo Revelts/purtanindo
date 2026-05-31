@@ -186,7 +186,7 @@ export const CONTENT = {
     partners: [
       { name: 'Juragan Apart', logo: '/partners/juraganapart.png', sizeClass: '' },
       { name: 'Mamaca', logo: '/partners/mamaca.png', sizeClass: '' },
-      { name: 'SanDisk', logo: '/partners/sandisk.webp', sizeClass: '' },
+      { name: 'SanDisk', logo: '/partners/sandisk.webp', sizeClass: 'h-8 w-auto' },
       { name: 'Tempo', logo: '/partners/tempo.webp', sizeClass: 'h-8 w-auto' },
     ],
   },
