@@ -1,0 +1,8 @@
+[   37828ms] [WARNING] MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added. Use emitter.setMaxListeners() to increase limit @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082
+[   37829ms] [WARNING] MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 end listeners added. Use emitter.setMaxListeners() to increase limit @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082
+[   37853ms] [WARNING] ObjectMultiplex - orphaned data for stream "app-init-liveness" @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082
+[   37853ms] [WARNING] ObjectMultiplex - orphaned data for stream "app-init-liveness" @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082
+[   37854ms] [WARNING] ObjectMultiplex - orphaned data for stream "background-liveness" @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082
+[   37854ms] [WARNING] ObjectMultiplex - orphaned data for stream "background-liveness" @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082
+[   37854ms] [WARNING] ObjectMultiplex - malformed chunk without name "[object Object]" @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082
+[   37854ms] [WARNING] ObjectMultiplex - malformed chunk without name "[object Object]" @ chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/scripts/contentscript.js:14082

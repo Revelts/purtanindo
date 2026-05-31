@@ -5,10 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/constants/navigation';
-import { Button } from '@/components/ui';
-import { FiMenu, FiX } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa';
 import { WHATSAPP_URL } from '@/constants/seo';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,57 +14,45 @@ export function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
-  };
-
-  const isHomePage = pathname === '/';
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isHomePage
-          ? isScrolled
-            ? 'bg-white/95 backdrop-blur-sm shadow-md'
-            : 'bg-transparent'
-          : 'bg-white/95 backdrop-blur-sm shadow-md'
+      className={`fixed top-0 left-0 right-0 z-50 bg-canvas transition-all duration-300 ${
+        isScrolled ? 'border-b border-border' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[72px]">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="/images/purtanindo-colored.webp"
-              alt="Purtanindo Logo"
-              width={150}
-              height={40}
-              className="h-10 w-auto"
+              src="/images/logo-2.webp"
+              alt="Purtanindo"
+              width={140}
+              height={38}
+              className="h-9 w-auto"
               priority
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Nav — centered */}
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? 'text-brand-start'
-                    : isHomePage && !isScrolled
-                    ? 'text-white hover:text-brand-start'
-                    : 'text-gray-700 hover:text-brand-start'
+                    ? 'text-ink underline underline-offset-4 decoration-accent'
+                    : 'text-muted hover:text-ink'
                 }`}
               >
                 {link.label}
@@ -74,22 +60,21 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA — right */}
           <div className="hidden md:block">
-            <Button
-              size="sm"
-              onClick={() => window.open(WHATSAPP_URL, '_blank')}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-5 py-2.5 rounded-pill bg-primary text-white text-sm font-medium hover:bg-ink transition-colors"
             >
-              <FaWhatsapp className="mr-2" />
-              Hubungi Kami
-            </Button>
+              Konsultasi Gratis
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile hamburger */}
           <button
-            className={`md:hidden text-2xl ${
-              isHomePage && !isScrolled ? 'text-white' : 'text-gray-900'
-            }`}
+            className="md:hidden text-2xl text-ink"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -100,7 +85,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+        <div className="md:hidden bg-canvas border-t border-border">
           <div className="px-4 py-6 space-y-4">
             {NAV_LINKS.map((link) => (
               <Link
@@ -108,25 +93,23 @@ export function Navbar() {
                 href={link.href}
                 className={`block text-base font-medium ${
                   isActive(link.href)
-                    ? 'text-brand-start'
-                    : 'text-gray-700 hover:text-brand-start'
+                    ? 'text-ink underline underline-offset-4 decoration-accent'
+                    : 'text-muted hover:text-ink'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Button
-              size="md"
-              className="w-full"
-              onClick={() => {
-                window.open(WHATSAPP_URL, '_blank');
-                setIsMobileMenuOpen(false);
-              }}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-center px-5 py-3 rounded-pill bg-primary text-white text-sm font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              <FaWhatsapp className="mr-2" />
-              Hubungi Kami
-            </Button>
+              Konsultasi Gratis
+            </a>
           </div>
         </div>
       )}

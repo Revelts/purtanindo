@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Container, Section, SectionHeading, Card, ContactButton } from '@/components/ui';
+import { Container, Section, SectionHeading, ContactButton } from '@/components/ui';
 import { CONTENT } from '@/constants/content';
 import { PAGE_METADATA, WHATSAPP_URL, EMAIL } from '@/constants/seo';
 import {
@@ -10,6 +10,7 @@ import {
   FaClock,
   FaPhone,
 } from 'react-icons/fa';
+import { AnimatedPage, FadeUp, StaggerGrid } from '@/components/motion';
 
 export const metadata: Metadata = {
   title: PAGE_METADATA.contact.title,
@@ -32,7 +33,6 @@ export default function ContactPage() {
       description: 'Chat langsung untuk respons cepat dan diskusi santai',
       action: 'Chat Sekarang',
       link: WHATSAPP_URL,
-      color: 'text-green-500',
     },
     {
       icon: FaEnvelope,
@@ -41,7 +41,6 @@ export default function ContactPage() {
       description: 'Kirim detail project untuk diskusi lebih mendalam',
       action: 'Kirim Email',
       link: `mailto:${EMAIL}`,
-      color: 'text-blue-500',
     },
     {
       icon: FaPhone,
@@ -50,159 +49,146 @@ export default function ContactPage() {
       description: 'Telepon langsung untuk konsultasi cepat',
       action: 'Hubungi',
       link: `tel:${contact.info.whatsapp}`,
-      color: 'text-purple-500',
     },
   ];
 
   const officeInfo = [
-    {
-      icon: FaMapMarkerAlt,
-      title: 'Lokasi',
-      value: contact.info.address,
-    },
-    {
-      icon: FaClock,
-      title: 'Jam Operasional',
-      value: contact.info.hours,
-    },
+    { icon: FaMapMarkerAlt, title: 'Lokasi', value: contact.info.address },
+    { icon: FaClock, title: 'Jam Operasional', value: contact.info.hours },
   ];
 
   return (
-    <>
-      {/* Hero Section */}
-      <Section className="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
+    <AnimatedPage>
+      {/* Hero */}
+      <Section className="pt-[72px] pb-16 bg-canvas">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              <span className="text-gradient">{contact.heading}</span>
+          <FadeUp className="max-w-2xl pt-16">
+            <p className="mono-label text-accent mb-5">Kontak</p>
+            <h1 className="font-display font-bold text-ink display-tight text-5xl md:text-6xl mb-6">
+              {contact.heading}
             </h1>
-            <p className="text-xl text-gray-600">{contact.subheading}</p>
-          </div>
+            <p className="text-muted text-xl">{contact.subheading}</p>
+          </FadeUp>
         </Container>
       </Section>
 
       {/* Contact Methods */}
-      <Section background="white">
+      <Section background="stone">
         <Container>
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <StaggerGrid className="grid md:grid-cols-3 gap-4 mb-12">
             {contactMethods.map((method, idx) => {
               const Icon = method.icon;
               return (
-                <Card key={idx} hover className="text-center">
-                  <div className={`text-5xl ${method.color} mb-4 mx-auto w-fit`}>
+                <div
+                  key={idx}
+                  className="bg-canvas border border-border rounded-sm p-6 hover:shadow-lift transition-shadow"
+                >
+                  <div className="text-accent text-2xl mb-4">
                     <Icon />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="font-display font-semibold text-ink text-lg mb-2">
                     {method.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-3">
-                    {method.description}
-                  </p>
-                  <p className="font-semibold text-gray-900 mb-4">
-                    {method.value}
-                  </p>
-                  <ContactButton
-                    size="sm"
-                    href={method.link}
-                  >
+                  <p className="text-muted text-sm mb-2">{method.description}</p>
+                  <p className="font-medium text-ink text-sm mb-5">{method.value}</p>
+                  <ContactButton size="sm" href={method.link}>
                     {method.action}
                   </ContactButton>
-                </Card>
+                </div>
               );
             })}
-          </div>
+          </StaggerGrid>
 
           {/* Office Info */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <StaggerGrid className="grid md:grid-cols-2 gap-4">
             {officeInfo.map((info, idx) => {
               const Icon = info.icon;
               return (
-                <Card key={idx}>
+                <div key={idx} className="bg-canvas border border-border rounded-sm p-6">
                   <div className="flex items-start gap-4">
-                    <div className="text-3xl text-brand-start">
+                    <div className="text-accent text-xl mt-1">
                       <Icon />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-1">
-                        {info.title}
-                      </h3>
-                      <p className="text-gray-600">{info.value}</p>
+                      <h3 className="font-semibold text-ink mb-1">{info.title}</h3>
+                      <p className="text-muted text-sm">{info.value}</p>
                     </div>
                   </div>
-                </Card>
+                </div>
               );
             })}
-          </div>
+          </StaggerGrid>
         </Container>
       </Section>
 
-      {/* CTA Section */}
-      <Section background="gray">
+      {/* CTA dark band */}
+      <Section background="primary">
         <Container>
-          <Card className="max-w-3xl mx-auto text-center bg-gradient-to-r from-[#ffac00] to-[#fd5e79] text-white">
-            <h2 className="text-3xl font-bold mb-4">{contact.cta.title}</h2>
-            <p className="text-lg mb-6 opacity-95">
+          <FadeUp className="max-w-2xl mx-auto text-center">
+            <h2 className="font-display font-bold text-white display-tight text-4xl md:text-5xl mb-4">
+              {contact.cta.title}
+            </h2>
+            <p className="text-white/65 text-lg leading-relaxed mb-10">
               {contact.cta.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ContactButton
-                size="lg"
-                variant="secondary"
-                href={WHATSAPP_URL}
-              >
+              <ContactButton size="lg" variant="secondary" href={WHATSAPP_URL}>
                 <FaWhatsapp className="mr-2" />
                 WhatsApp Kami
               </ContactButton>
               <ContactButton
                 size="lg"
-                variant="outline"
-                className="bg-white text-brand-start border-white hover:bg-gray-50"
+                variant="ghost"
                 href={`mailto:${EMAIL}`}
                 openInNewTab={false}
+                className="text-white/75 hover:text-white underline underline-offset-4"
               >
                 <FaEnvelope className="mr-2" />
-                Email Kami
+                Email Kami →
               </ContactButton>
             </div>
-          </Card>
+          </FadeUp>
         </Container>
       </Section>
 
-      {/* FAQ Quick Links */}
+      {/* FAQ Quick */}
       <Section background="white">
         <Container>
-          <SectionHeading
-            heading="Pertanyaan Umum"
-            subheading="Jawaban Cepat untuk Pertanyaan Anda"
-          />
-
-          <div className="grid md:grid-cols-2 gap-6">
+          <FadeUp>
+            <SectionHeading
+              heading="Pertanyaan yang Sering Ditanyakan"
+              subheading="Jawaban sebelum Anda menghubungi kami"
+            />
+          </FadeUp>
+          <div className="border-t border-border">
             {[
               {
                 question: 'Apakah konsultasi benar-benar gratis?',
-                answer: 'Ya, 100% gratis tanpa komitmen. Kami diskusi kebutuhan Anda dan kasih rekomendasi terbaik.',
+                answer: '100% gratis, tanpa syarat. Kami ngobrol tentang kebutuhan Anda dan kasih rekomendasi jujur, termasuk kalau ternyata Anda belum butuh yang mahal-mahal.',
               },
               {
-                question: 'Berapa lama website/aplikasi saya jadi?',
-                answer: 'Website: 2-8 minggu. Aplikasi: 2-3 bulan. Timeline pasti kita sepakati setelah analisis.',
+                question: 'Berapa lama proses pengerjaan?',
+                answer: 'Tergantung scope. Website: 2–8 minggu. Aplikasi: 2–3 bulan. Timeline pasti kita sepakati di awal. Tidak ada yang dikerjakan dulu tanpa sepengetahuan Anda.',
               },
               {
                 question: 'Apakah cocok untuk bisnis kecil?',
-                answer: 'Sangat cocok! Kami punya solusi untuk UMKM dengan budget terjangkau dan bisa scale bertahap.',
+                answer: 'Sangat cocok. Kami kerja dengan bisnis dari berbagai skala: dari yang baru mau punya website pertama sampai yang butuh sistem enterprise.',
               },
               {
-                question: 'Bagaimana cara mulai kerja sama?',
-                answer: 'Hubungi via WhatsApp, ceritakan kebutuhan Anda. Kami akan schedule konsultasi dan kasih proposal.',
+                question: 'Bagaimana cara memulai?',
+                answer: 'Kirim pesan WhatsApp, ceritakan bisnis Anda dan apa yang ingin Anda selesaikan. Kami akan bantu tentukan langkah pertama yang paling masuk akal.',
               },
             ].map((faq, idx) => (
-              <Card key={idx}>
-                <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600 text-sm">{faq.answer}</p>
-              </Card>
+              <FadeUp key={idx} delay={idx * 0.06}>
+                <div className="grid md:grid-cols-2 gap-2 py-6 border-b border-border">
+                  <h3 className="font-medium text-ink text-sm">{faq.question}</h3>
+                  <p className="text-muted text-sm leading-relaxed">{faq.answer}</p>
+                </div>
+              </FadeUp>
             ))}
           </div>
         </Container>
       </Section>
-    </>
+    </AnimatedPage>
   );
 }

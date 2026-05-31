@@ -1,10 +1,11 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Container, Section, SectionHeading, Card } from '@/components/ui';
+import { Container, Section, SectionHeading } from '@/components/ui';
 import { CTASection, WhyChooseUsSection } from '@/components/sections';
 import { CONTENT } from '@/constants/content';
 import { PAGE_METADATA } from '@/constants/seo';
+import { AnimatedPage, FadeUp, StaggerGrid } from '@/components/motion';
 
 export const metadata: Metadata = {
   title: PAGE_METADATA.about.title,
@@ -17,145 +18,115 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const { about, team } = CONTENT;
+  const { about } = CONTENT;
 
   return (
-    <>
-      {/* Hero Section */}
-      <Section className="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
+    <AnimatedPage>
+      {/* Hero */}
+      <Section className="pt-[72px] pb-16 bg-canvas">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              <span className="text-gradient">{about.heading}</span>
+          <FadeUp className="max-w-2xl pt-16">
+            <p className="mono-label text-accent mb-5">Tentang Kami</p>
+            <h1 className="font-display font-bold text-ink display-tight text-5xl md:text-6xl mb-6">
+              {about.heading}
             </h1>
-            <p className="text-xl text-gray-600">{about.title}</p>
-          </div>
+            <p className="text-muted text-xl">{about.title}</p>
+          </FadeUp>
         </Container>
       </Section>
 
-      {/* About Content */}
+      {/* About + Image */}
       <Section background="white">
         <Container>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <FadeUp>
+              <h2 className="font-display font-bold text-ink text-3xl md:text-4xl display-tight mb-6">
                 Visi & Misi Kami
               </h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
+              <p className="text-muted leading-relaxed mb-4">
                 {about.description}
               </p>
-              <p className="text-gray-700 leading-relaxed">
-                Kami tidak hanya membangun teknologi—kami membantu bisnis Anda 
-                bertransformasi dan bertumbuh. Dari konsultasi awal, pemilihan 
-                solusi yang tepat, hingga implementasi dan support berkelanjutan, 
-                Purtanindo adalah partner terpercaya dalam perjalanan digital Anda.
+              <p className="text-muted leading-relaxed">
+                Kami tidak cuma terima brief lalu buatkan. Kami ikut mikir: solusi
+                apa yang paling masuk akal untuk kondisi bisnis Anda sekarang,
+                bukan solusi yang paling besar atau paling mahal. Dari awal
+                konsultasi sampai setelah launch, kami masih bisa dihubungi.
               </p>
-            </div>
-
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-soft">
+            </FadeUp>
+            <FadeUp delay={0.15} className="relative h-[400px] rounded-card overflow-hidden shadow-lift">
               <Image
-                src="/images/img2.webp"
+                src="/images/image-2.webp"
                 alt="Purtanindo Team"
                 fill
                 className="object-cover"
               />
-            </div>
+            </FadeUp>
           </div>
         </Container>
       </Section>
 
       {/* Stats */}
-      <Section background="gray">
+      <Section background="stone">
         <Container>
-          <div className="grid md:grid-cols-3 gap-8">
+          <StaggerGrid className="grid md:grid-cols-3 gap-8 text-center">
             {about.features.map((feature, idx) => (
-              <Card key={idx} className="text-center">
-                <div className="text-5xl text-brand-start mb-3">
+              <div key={idx} className="py-4">
+                <div className="font-display font-bold text-6xl md:text-7xl text-ink display-tight mb-2">
                   {feature.value}
                 </div>
-                <div className="text-gray-600">{feature.label}</div>
-              </Card>
+                <div className="mono-label text-muted">{feature.label}</div>
+              </div>
             ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Team Section */}
-      <Section id="team" background="white">
-        <Container>
-          <SectionHeading
-            heading={team.heading}
-            subheading={team.subheading}
-          />
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.members.map((member, idx) => (
-              <Card key={idx} hover className="text-center">
-                <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-brand-start font-semibold mb-3">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 text-sm">{member.description}</p>
-              </Card>
-            ))}
-          </div>
+          </StaggerGrid>
         </Container>
       </Section>
 
       {/* Values */}
-      <Section background="gradient">
+      <Section background="green">
         <Container>
-          <SectionHeading
-            heading="Nilai-Nilai Kami"
-            subheading="Prinsip yang Kami Pegang"
-          />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeUp>
+            <SectionHeading
+              heading="Nilai-Nilai yang Kami Pegang"
+              subheading="Bukan slogan, ini cara kami bekerja setiap hari"
+              light
+            />
+          </FadeUp>
+          <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
-                title: 'Hasil Bisnis',
+                title: 'Hasilnya yang dihitung',
                 description:
-                  'Teknologi harus berdampak nyata. Kami fokus pada solusi yang meningkatkan efisiensi dan revenue bisnis Anda.',
+                  'Fitur banyak bukan ukuran keberhasilan. Kami lebih senang dengar klien bilang operasional mereka lebih lancar atau inquiry-nya bertambah.',
               },
               {
-                title: 'Transparansi',
+                title: 'Tidak ada yang disembunyikan',
                 description:
-                  'Harga jelas, timeline realistis, progress terbuka. Tidak ada hidden cost atau janji yang tidak bisa ditepati.',
+                  'Harga, timeline, progress, semuanya terbuka. Kalau ada kendala di tengah jalan, kami bilang lebih awal, bukan setelah deadline lewat.',
               },
               {
-                title: 'Kustomisasi',
+                title: 'Dibangun untuk bisnis Anda, bukan untuk semua orang',
                 description:
-                  'Setiap bisnis unik. Kami bangun solusi yang disesuaikan dengan workflow dan kebutuhan spesifik Anda.',
+                  'Kami tidak jual template lalu bilang sudah custom. Setiap proyek dimulai dari nol, karena cara bisnis Anda beroperasi tidak sama dengan yang lain.',
               },
               {
-                title: 'Partnership',
+                title: 'Kami masih ada setelah project selesai',
                 description:
-                  'Kami bukan vendor yang lepas tangan. Kami partner yang support bisnis Anda bahkan setelah project selesai.',
+                  'Banyak klien kami yang sudah kerja sama lebih dari satu proyek. Bukan karena kontrak, tapi karena kami masih bisa dihubungi kalau ada yang perlu dibenahi.',
               },
             ].map((value, idx) => (
-              <Card key={idx}>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <div key={idx} className="p-6 rounded-sm border border-white/10 bg-white/5">
+                <h3 className="font-display font-semibold text-white text-lg mb-2">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{value.description}</p>
-              </Card>
+                <p className="text-white/65 text-sm leading-relaxed">{value.description}</p>
+              </div>
             ))}
-          </div>
+          </StaggerGrid>
         </Container>
       </Section>
 
       <WhyChooseUsSection />
       <CTASection />
-    </>
+    </AnimatedPage>
   );
 }

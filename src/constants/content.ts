@@ -1,33 +1,33 @@
 export const CONTENT = {
   hero: {
-    heading: 'Partner Transformasi Digital Terpercaya untuk Bisnis Anda',
-    subheading: 'Wujudkan potensi penuh bisnis Anda dengan solusi digitalisasi yang tepat sasaran. Dari website profesional hingga sistem terintegrasi—kami bantu Anda bertumbuh lebih cepat.',
+    heading: 'Website, Aplikasi & Sistem Digital untuk Bisnis yang Serius Tumbuh',
+    subheading:
+      'Kami bukan vendor yang terima order lalu hilang. Kami bantu UMKM, startup, dan korporat punya sistem digital yang benar-benar kerja, dari konsultasi sampai setelah launch.',
     cta: {
-      primary: 'Konsultasi Gratis',
-      secondary: 'Lihat Portfolio',
+      primary: 'Konsultasi Gratis via WhatsApp',
     },
   },
 
   about: {
-    heading: 'Tentang Kami',
-    title: 'Purtanindo adalah partner digital Anda—bukan sekadar vendor teknologi',
+    heading: 'Tentang Purtanindo',
+    title: 'Kami bukan yang paling murah. Tapi kami yang paling mau duduk bareng dan mikirin bisnis Anda.',
     description:
-      'Kami memahami bahwa setiap bisnis memiliki tantangan unik dalam era digital. Dari UMKM yang ingin naik kelas, startup yang butuh scaling cepat, hingga korporat yang perlu sistem terintegrasi—kami hadir dengan solusi yang disesuaikan dengan kebutuhan dan budget Anda. Lebih dari sekadar membangun aplikasi, kami membantu meningkatkan efisiensi operasional dan mendorong pertumbuhan bisnis yang terukur.',
+      'Purtanindo dibangun dari satu keyakinan sederhana: teknologi harus menghasilkan uang atau menghemat waktu. Kalau tidak, buat apa. Kami kerja bareng UMKM, startup, dan perusahaan menengah yang punya niat serius go-digital. Bukan terima order langsung ngoding, tapi ngobrol dulu, pahami bisnis Anda, baru mulai kerja.',
     features: [
       {
         icon: 'clock',
-        value: '1000+',
-        label: 'Jam Kerja Profesional',
+        value: '1.000+',
+        label: 'Jam Kerja Terverifikasi',
       },
       {
         icon: 'project',
-        value: '5+',
-        label: 'Proyek Selesai',
+        value: '100%',
+        label: 'Klien Mendapat Support Pasca-Launch',
       },
       {
         icon: 'client',
-        value: '3+',
-        label: 'Klien Puas',
+        value: '5+',
+        label: 'Industri Dilayani',
       },
     ],
   },
@@ -36,20 +36,20 @@ export const CONTENT = {
     heading: 'Layanan Kami',
     subheading: 'Solusi Digital yang Dirancang untuk Pertumbuhan Bisnis',
     description:
-      'Kami menyediakan layanan jasa digitalisasi bisnis, pembuatan website, dan pengembangan aplikasi yang tidak hanya terlihat profesional—tapi benar-benar meningkatkan efisiensi operasional dan revenue bisnis Anda.',
+      'Tidak ada yang kami jual dari rak. Setiap pekerjaan dimulai dari ngobrol: memahami bisnis Anda dulu, baru ngoding.',
     items: [
       {
         id: 'web',
         title: 'Jasa Pembuatan Website Profesional',
         icon: 'laptop',
         description:
-          'Website adalah aset digital yang bekerja 24/7 untuk bisnis Anda. Dari company profile hingga e-commerce, kami bangun website yang menarik customer dan tingkatkan kredibilitas brand.',
+          'Banyak website cuma jadi brosur online yang nggak ada yang buka. Kami bangun website yang punya tujuan: entah itu datangkan inquiry, jual produk, atau bikin calon klien langsung percaya sebelum hubungi Anda.',
         features: [
-          'Company profile untuk membangun kepercayaan bisnis Anda',
-          'Landing page dengan konversi maksimal',
-          'E-commerce dengan sistem pembayaran terintegrasi',
-          'Website custom sesuai kebutuhan bisnis',
-          'Optimasi SEO untuk ranking Google lebih baik',
+          'Company profile yang bikin calon klien langsung percaya',
+          'Landing page yang fokus satu tujuan: bikin pengunjung menghubungi Anda',
+          'Toko online lengkap dengan payment gateway dan laporan otomatis',
+          'Website custom yang sesuai cara bisnis Anda bekerja',
+          'SEO dasar biar bisnis Anda lebih mudah ditemukan di Google',
         ],
         gradient: 'from-blue-500 to-cyan-500',
       },
@@ -58,13 +58,13 @@ export const CONTENT = {
         title: 'Jasa Pembuatan Aplikasi Mobile & Web',
         icon: 'mobile',
         description:
-          'Bawa bisnis ke genggaman pelanggan. Aplikasi mobile & web app yang mempermudah interaksi customer, tingkatkan loyalitas, dan buka peluang revenue baru.',
+          'Kalau pelanggan Anda sudah serba pakai HP, bisnis Anda juga harus ada di sana. Kami bangun aplikasi yang enak dipakai, bukan yang kelihatan bagus di presentasi tapi bikin pengguna bingung.',
         features: [
-          'Aplikasi Android & iOS untuk jangkauan customer lebih luas',
-          'Web application untuk sistem internal dan layanan online',
-          'Interface user-friendly untuk semua kalangan',
-          'Dashboard admin untuk kelola bisnis dari mana saja',
-          'Integrasi payment gateway, notifikasi & fitur bisnis',
+          'Aplikasi Android & iOS untuk pelanggan yang tersebar di mana saja',
+          'Web app untuk sistem internal, portal klien, atau layanan yang butuh login',
+          'Tampilan yang mudah dipakai siapapun, bukan cuma yang melek teknologi',
+          'Dashboard admin untuk pantau bisnis dari HP, bukan harus ke kantor dulu',
+          'Bisa diintegrasikan dengan payment gateway, notifikasi, dan sistem lain yang sudah ada',
         ],
         gradient: 'from-purple-500 to-pink-500',
       },
@@ -72,28 +72,29 @@ export const CONTENT = {
         id: 'enterprise',
         title: 'Digitalisasi Bisnis & Sistem Terintegrasi',
         icon: 'code',
-        description: 'Masih kelola bisnis pakai Excel dan WhatsApp? Waktunya upgrade! Transform proses manual jadi sistem digital yang otomatis, terintegrasi, dan mudah di-scale.',
+        description:
+          'Masih kelola operasional pakai Excel dan WhatsApp grup? Kami sering ketemu kondisi ini. Dan kami tahu cara ubah sistem yang berantakan itu jadi sesuatu yang rapi, otomatis, dan nggak bikin pusing tim Anda.',
         features: [
-          'Sistem ERP untuk operasional lebih efisien',
-          'CRM untuk kelola customer & pipeline penjualan',
-          'Otomasi proses bisnis hemat waktu & kurangi error',
-          'Sistem inventory, keuangan & operasional terintegrasi',
-          'Dashboard analytics real-time untuk keputusan data-driven',
+          'Sistem ERP yang mengikuti cara kerja bisnis Anda, bukan sebaliknya',
+          'CRM buat tim sales: tahu siapa harus di-follow up, kapan, dan hasilnya apa',
+          'Otomasi proses yang makan waktu: kurangi kerja manual, kurangi kesalahan',
+          'Inventory, keuangan, dan operasional dalam satu sistem yang saling nyambung',
+          'Laporan real-time supaya keputusan diambil dari data, bukan feeling',
         ],
         gradient: 'from-orange-500 to-red-500',
       },
       {
         id: 'marketing',
-        title: 'Konsultasi IT & Strategi Digital',
+        title: 'Konsultasi IT & Strategi Digitalisasi',
         icon: 'chart',
         description:
-          'Bingung mulai digitalisasi dari mana? Kami jadi partner konsultan yang bantu susun roadmap digital sesuai kondisi dan goals bisnis Anda.',
+          'Kadang bukan soal nggak punya uang buat teknologi, tapi nggak tahu mana yang harus dibeli duluan. Kami bantu duduk bareng, petakan kondisi bisnis Anda, dan tentukan langkah yang paling masuk akal untuk dimulai sekarang.',
         features: [
-          'Analisis kebutuhan digital & identifikasi area improvement',
-          'Roadmap digitalisasi bertahap sesuai budget bisnis',
-          'Strategi MVP (Minimum Viable Product) untuk startup',
-          'Konsultasi teknologi tepat untuk bisnis Anda',
-          'Digital marketing & SEO untuk visibilitas online',
+          'Audit singkat kondisi digital bisnis Anda dan apa yang paling perlu dibenahi',
+          'Roadmap bertahap yang disesuaikan dengan cashflow dan prioritas bisnis',
+          'Strategi MVP untuk startup yang belum mau keluar budget besar di awal',
+          'Rekomendasi teknologi yang jujur: kami bilang kalau solusi Anda tidak butuh yang mahal',
+          'Konsultasi SEO dan digital marketing kalau visibilitas online jadi prioritas',
         ],
         gradient: 'from-green-500 to-emerald-500',
       },
@@ -102,52 +103,52 @@ export const CONTENT = {
 
   whyChooseUs: {
     heading: 'Mengapa Memilih Purtanindo?',
-    subheading: 'Partner Digital yang Benar-Benar Memahami Bisnis Anda',
+    subheading: 'Ini yang biasanya klien kami ceritakan setelah kerja sama pertama',
     items: [
       {
         icon: 'expertise',
-        title: 'Pendekatan Konsultatif, Bukan Sekadar Vendor',
+        title: 'Kami nggak langsung jualan',
         description:
-          'Kami tidak langsung jualan produk. Kami dengarkan dulu tantangan bisnis Anda, lalu rekomendasikan solusi yang pas—bukan yang paling mahal.',
+          'Pertemuan pertama bukan presentasi produk. Kami lebih banyak nanya dan dengerin. Tantangan Anda apa, bisnis Anda jalan gimana, baru kami kasih rekomendasi. Termasuk kalau solusinya lebih sederhana dari yang Anda bayangkan.',
       },
       {
         icon: 'quality',
-        title: 'Solusi Custom, Bukan Template',
+        title: 'Tidak ada dua klien yang kami kerjakan dengan cara sama',
         description:
-          'Setiap bisnis unik, jadi solusinya juga harus unik. Kami bangun sistem yang disesuaikan dengan workflow dan kebutuhan spesifik bisnis Anda.',
+          'Bisnis Anda punya cara kerja sendiri. Kami tidak memaksakan template lalu bilang itu sudah custom. Kami bangun dari awal sesuai kebutuhan Anda yang sebenarnya.',
       },
       {
         icon: 'support',
-        title: 'Fokus pada ROI & Hasil Bisnis',
+        title: 'Fitur banyak bukan berarti bagus',
         description:
-          'Teknologi tanpa impact adalah sia-sia. Kami ukur kesuksesan dari hasil nyata: efisiensi meningkat, customer puas, revenue bertumbuh.',
+          'Kami lebih senang klien bilang "proses yang tadinya 3 hari sekarang 4 jam" daripada "fiturnya lengkap banget." Yang pertama artinya berhasil. Yang kedua belum tentu.',
       },
       {
         icon: 'price',
-        title: 'Harga Transparan & Fleksibel',
+        title: 'Harga kami tidak berubah di tengah jalan',
         description:
-          'Budget UMKM atau korporat? Kami punya solusi yang sesuai. Tidak ada biaya tersembunyi, semua jelas dari awal.',
+          'Setelah sepakat scope dan angka di awal, itu yang kami pegang. Tidak ada biaya tambahan yang tiba-tiba muncul. Kalau ada perubahan scope, kami diskusikan dulu, tidak langsung dikerjakan dan ditagih.',
       },
       {
         icon: 'agile',
-        title: 'Proses Kerja yang Terstruktur',
+        title: 'Anda selalu tahu project Anda ada di mana',
         description:
-          'Dari konsultasi, desain, development, hingga training—semua tahap jelas dan Anda selalu tahu progress project.',
+          'Setiap tahap ada checkpoint. Sebelum lanjut ke tahap berikutnya, kami minta feedback Anda dulu. Tidak ada kejutan di akhir karena arahnya sudah berbeda dari yang disepakati.',
       },
       {
         icon: 'security',
-        title: 'Support Berkelanjutan',
+        title: 'Setelah launch, kami masih di sini',
         description:
-          'Kami tidak hilang setelah project selesai. Maintenance, update, dan konsultasi lanjutan tetap tersedia untuk Anda.',
+          'Sudah terlalu banyak cerita vendor yang susah dihubungi begitu proyek selesai. Kami tidak mau jadi cerita itu. Ada bug, ada pertanyaan, atau mau tambah fitur, kami masih bisa dihubungi.',
       },
     ],
   },
 
   cta: {
-    title: 'Siap Transformasi Digital untuk Bisnis Anda?',
+    title: 'Belum yakin mulai dari mana? Ceritakan dulu ke kami.',
     subtitle:
-      'Mulai dari konsultasi gratis. Ceritakan tantangan bisnis Anda, dan kami bantu temukan solusi digital yang tepat—tanpa commitment dulu.',
-    button: 'Konsultasi Gratis via WhatsApp',
+      'Konsultasi pertama gratis dan tanpa komitmen apapun. Biasanya cukup 30 menit ngobrol untuk tahu langkah apa yang paling masuk akal untuk bisnis Anda. Hubungi lewat WhatsApp, kami biasanya balas dalam 1 jam kerja.',
+    button: 'Mulai via WhatsApp Sekarang',
     buttonSecondary: 'Kirim Email',
   },
 
@@ -179,86 +180,120 @@ export const CONTENT = {
     ],
   },
 
+  brandPartners: {
+    heading: 'Brand Partners',
+    subheading: 'Dipercaya oleh berbagai brand',
+    partners: [
+      { name: 'Juragan Apart', logo: '/partners/juraganapart.png', sizeClass: '' },
+      { name: 'Mamaca', logo: '/partners/mamaca.png', sizeClass: '' },
+      { name: 'SanDisk', logo: '/partners/sandisk.webp', sizeClass: '' },
+      { name: 'Tempo', logo: '/partners/tempo.webp', sizeClass: 'h-8 w-auto' },
+    ],
+  },
+
   portfolio: {
-    heading: 'Portfolio Kami',
-    subheading: 'Solusi Digital yang Sudah Kami Wujudkan',
+    heading: 'Portofolio Kami',
+    subheading: 'Klien yang Kami Bantu Berkembang',
     description:
-      'Dari UMKM hingga enterprise, kami telah membantu berbagai bisnis bertransformasi digital. Lihat bagaimana solusi kami memberikan dampak nyata untuk pertumbuhan bisnis klien.',
-    projects: [
+      'Setiap project di sini dimulai dari tantangan bisnis nyata. Lihat bagaimana kami mengubah kebutuhan menjadi sistem yang berjalan dan memberikan dampak terukur.',
+    brands: [
       {
         id: 1,
-        title: 'Platform E-Commerce Terintegrasi',
-        category: 'Jasa Pembuatan Website',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-        description:
-          'Membantu bisnis retail meningkatkan penjualan 3x lipat dengan toko online yang mudah dikelola, sistem pembayaran otomatis, dan laporan penjualan real-time.',
-        tech: ['Next.js', 'Node.js', 'PostgreSQL'],
+        name: 'Juragan Apart',
+        logo: '/partners/juraganapart.png',
+        industry: 'Properti',
+        projects: [
+          {
+            title: 'Website Company Profile',
+            description:
+              'Website profesional yang meningkatkan kredibilitas brand dan mendatangkan inquiry calon penyewa secara organik.',
+            tech: ['Next.js', 'Tailwind CSS', 'Vercel'],
+          },
+          {
+            title: 'Sistem Booking & Manajemen Unit',
+            description:
+              'Sistem internal untuk kelola ketersediaan unit, booking tamu, dan laporan pendapatan secara real-time.',
+            tech: ['Laravel', 'MySQL', 'REST API'],
+          },
+        ],
       },
       {
         id: 2,
-        title: 'Aplikasi Mobile untuk Layanan Keuangan',
-        category: 'Jasa Pembuatan Aplikasi',
-        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
-        description:
-          'Aplikasi mobile banking yang mempermudah nasabah bertransaksi kapan saja. Meningkatkan engagement customer dan mengurangi beban operasional kantor cabang.',
-        tech: ['Flutter', 'Firebase', 'REST API'],
+        name: 'Mamaca',
+        logo: '/partners/mamaca.png',
+        industry: 'F&B / Kuliner',
+        projects: [
+          {
+            title: 'Landing Page Produk',
+            description:
+              'Landing page fokus konversi yang menampilkan produk unggulan dan memudahkan pelanggan langsung order via WhatsApp.',
+            tech: ['Next.js', 'Tailwind CSS'],
+          },
+          {
+            title: 'Katalog Digital & Order System',
+            description:
+              'Katalog produk online dengan fitur order dan notifikasi otomatis ke tim operasional.',
+            tech: ['React', 'Node.js', 'Firebase'],
+          },
+        ],
       },
       {
         id: 3,
-        title: 'Sistem Manajemen Manufaktur (ERP)',
-        category: 'Digitalisasi Bisnis',
-        image: 'https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&h=600&fit=crop',
-        description:
-          'Digitalisasi proses produksi, inventory, dan keuangan. Menghemat 40% waktu operasional dan meningkatkan akurasi data hingga 95%.',
-        tech: ['React', 'Laravel', 'MySQL'],
+        name: 'SanDisk',
+        logo: '/partners/sandisk.webp',
+        industry: 'Teknologi / Elektronik',
+        projects: [
+          {
+            title: 'Microsite Produk',
+            description:
+              'Microsite campaign untuk peluncuran lini produk baru, dioptimalkan untuk performa dan SEO.',
+            tech: ['Next.js', 'Tailwind CSS', 'Vercel'],
+          },
+        ],
       },
       {
         id: 4,
-        title: 'Dashboard CRM untuk Sales Team',
-        category: 'Digitalisasi Bisnis',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-        description:
-          'Sistem CRM yang membantu tim sales track leads, closing deals lebih cepat, dan meningkatkan conversion rate hingga 25%.',
-        tech: ['Vue.js', 'Express', 'MongoDB'],
-      },
-      {
-        id: 5,
-        title: 'Company Profile Profesional',
-        category: 'Jasa Pembuatan Website',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
-        description:
-          'Website company profile yang meningkatkan kredibilitas brand dan mendatangkan 50+ inquiry potensial setiap bulan melalui SEO optimization.',
-        tech: ['Next.js', 'Tailwind CSS', 'Vercel'],
+        name: 'Tempo',
+        logo: '/partners/tempo.webp',
+        industry: 'Media',
+        projects: [
+          {
+            title: 'Portal Konten Digital',
+            description:
+              'Portal digital untuk distribusi konten dengan sistem manajemen artikel dan integrasi media sosial.',
+            tech: ['Next.js', 'PostgreSQL', 'REST API'],
+          },
+        ],
       },
     ],
   },
 
   testimonials: {
-    heading: 'Testimoni Klien',
-    subheading: 'Cerita Sukses dari Partner Bisnis Kami',
+    heading: 'Yang Klien Kami Katakan',
+    subheading: 'Dari orang-orang yang pernah duduk di posisi yang sama dengan Anda',
     items: [
       {
         name: 'Budi Santoso',
-        role: 'CEO PT. Digital Sejahtera',
+        role: 'CEO, PT. Digital Sejahtera',
         image: '/images/tbd.webp',
         content:
-          'Awalnya bingung harus mulai digitalisasi dari mana. Tim Purtanindo nggak cuma buatin website, tapi juga kasih roadmap lengkap. Hasilnya? Inquiry naik 60% dalam 3 bulan. Sangat recommended!',
+          'Kami tidak tahu harus mulai dari mana. Tim Purtanindo tidak langsung jualan. Mereka audit kondisi digital kami dulu, baru kasih roadmap yang masuk akal. Tiga bulan setelah website baru launch, inquiry masuk naik 60%.',
         rating: 5,
       },
       {
         name: 'Siti Nurhaliza',
-        role: 'Pemilik Toko Fashion Online',
+        role: 'Founder, Butik Fashion Online',
         image: '/images/tbd.webp',
         content:
-          'Dulu jual pakai Instagram aja, sekarang punya toko online sendiri. Aplikasinya mudah banget dipakai customer, dan saya bisa pantau penjualan real-time. Omzet langsung naik 3x!',
+          'Sebelumnya cuma jualan lewat Instagram dan serba manual. Sekarang punya toko online sendiri yang customer bilang mudah dipakai. Yang paling saya suka: saya bisa pantau semua penjualan real-time dari HP. Omzet naik signifikan dalam bulan pertama.',
         rating: 5,
       },
       {
         name: 'Andi Wijaya',
-        role: 'Operations Manager - Perusahaan Manufaktur',
+        role: 'Operations Manager, Perusahaan Manufaktur',
         image: '/images/tbd.webp',
         content:
-          'Sistem ERP custom yang mereka buat benar-benar sesuai dengan workflow kami. Proses yang tadinya butuh 3 hari sekarang cuma 4 jam. ROI-nya jauh lebih cepat dari ekspektasi!',
+          'Sistem ERP custom yang mereka buat benar-benar sesuai dengan workflow produksi kami, bukan template yang dipaksakan. Proses yang biasanya 3 hari sekarang selesai dalam 4 jam. ROI-nya jauh lebih cepat dari perkiraan kami.',
         rating: 5,
       },
     ],
@@ -266,44 +301,45 @@ export const CONTENT = {
 
   faq: {
     heading: 'Pertanyaan yang Sering Ditanyakan',
-    subheading: 'Jawaban untuk Keraguan Anda',
+    subheading: 'Kalau Anda punya pertanyaan lain, tinggal tanya lewat WhatsApp',
     items: [
       {
-        question: 'Bisnis saya masih kecil, apakah jasa digitalisasi cocok untuk saya?',
+        question: 'Bisnis saya masih kecil, apakah layak pakai jasa digitalisasi?',
         answer:
-          'Justru ini waktu yang tepat! UMKM yang mulai digitalisasi lebih awal punya competitive advantage. Kami punya solusi yang disesuaikan dengan budget dan skala bisnis Anda. Bisa mulai dari website sederhana dulu, lalu scale up bertahap seiring bisnis berkembang.',
+          'Justru yang mulai lebih awal yang diuntungkan. Website sederhana pun sudah bisa bikin bisnis Anda kelihatan lebih serius dari kompetitor yang belum ada online-nya. Kami bisa mulai dari yang kecil dulu, baru berkembang sesuai kebutuhan.',
       },
       {
-        question: 'Berapa biaya untuk jasa pembuatan website atau aplikasi?',
+        question: 'Berapa biaya pembuatan website atau aplikasi?',
         answer:
-          'Investasi tergantung scope dan kompleksitas. Website company profile mulai dari jutaan, aplikasi mobile dari puluhan juta. Yang pasti, kami kasih estimasi harga transparan setelah konsultasi gratis—tidak ada hidden cost. Bisa juga dicicil per milestone project.',
+          'Tergantung scope dan apa yang Anda butuhkan. Yang pasti, kami tidak akan kasih angka sebelum benar-benar tahu kebutuhannya, supaya estimasinya akurat, bukan sekadar tebakan. Setelah konsultasi, kami kasih breakdown biaya yang jelas. Tidak ada biaya yang tiba-tiba muncul.',
       },
       {
-        question: 'Berapa lama website atau aplikasi saya jadi?',
+        question: 'Berapa lama pengerjaannya?',
         answer:
-          'Website landing page atau company profile: 2-4 minggu. E-commerce atau sistem custom: 1-2 bulan. Aplikasi mobile: 2-3 bulan. Sistem enterprise: 3-6 bulan. Timeline pasti akan kita sepakati di awal setelah analisis kebutuhan.',
+          'Estimasi umum: landing page atau company profile 2–4 minggu, e-commerce atau web app 4–8 minggu, aplikasi mobile 2–3 bulan, sistem enterprise 3–6 bulan. Timeline pasti kita sepakati di awal setelah ngobrol soal kebutuhan, dan kami pegang komitmen itu.',
       },
       {
-        question: 'Saya tidak paham teknologi, apakah tetap bisa bekerja sama?',
+        question: 'Saya tidak paham teknologi sama sekali, apakah bisa bekerja sama?',
         answer:
-          'Malah kebanyakan klien kami memang dari background non-IT! Kami akan jelaskan semua dengan bahasa yang mudah dipahami, bukan bahasa teknis yang bikin pusing. Fokus kami adalah solusi bisnis, bukan ngajarin coding.',
+          'Kebanyakan klien kami memang bukan dari background IT. Tidak perlu paham teknologi. Cukup ceritakan bisnis Anda dan apa yang mau Anda capai. Kami yang terjemahkan ke dalam sistem yang perlu dibangun.',
       },
       {
-        question: 'Apakah ada maintenance setelah project selesai?',
+        question: 'Ada maintenance setelah project selesai?',
         answer:
-          'Pasti! Semua project dapat garansi bug-fix dan free maintenance periode tertentu. Setelah itu, ada paket maintenance bulanan untuk update, monitoring, dan support berkelanjutan. Kami tidak akan "hilang" setelah project selesai.',
+          'Ya. Semua project dapat garansi bug-fix dan masa maintenance gratis. Setelah itu ada paket bulanan kalau Anda butuh support rutin. Kami tidak hilang setelah serah terima.',
       },
       {
-        question: 'Bagaimana kalau saya sudah punya website/sistem tapi mau dikembangkan?',
+        question: 'Bisa bantu kalau saya sudah punya sistem tapi mau dikembangkan?',
         answer:
-          'Bisa banget! Kami sering handle upgrade dan integrasi sistem existing. Mau tambah fitur, improve performance, atau integrasi dengan sistem lain—semua bisa. Kita review dulu kondisi sistem Anda, baru kasih rekomendasi terbaik.',
+          'Bisa. Upgrade sistem lama, tambah fitur, atau integrasi dengan platform lain, semua kami tangani. Kami lihat dulu kondisi sistem yang ada, baru kasih saran yang tidak membuang apa yang sudah Anda bangun.',
       },
     ],
   },
 
   contact: {
     heading: 'Hubungi Kami',
-    subheading: 'Mulai Transformasi Digital Bisnis Anda Sekarang',
+    subheading:
+      'Tidak perlu brief yang panjang. Ceritakan saja situasi bisnis Anda, kami bantu pikirkan langkah selanjutnya.',
     info: {
       whatsapp: '+62 812 1333 1315',
       email: 'leynardoyosef@gmail.com',
@@ -311,9 +347,9 @@ export const CONTENT = {
       hours: 'Senin - Jumat, 09:00 - 18:00 WIB',
     },
     cta: {
-      title: 'Punya Pertanyaan atau Siap Mulai Project?',
+      title: 'Siap Mulai atau Masih Punya Pertanyaan?',
       description:
-        'Konsultasi GRATIS tanpa komitmen. Ceritakan tantangan bisnis Anda, dan kami akan bantu carikan solusi terbaik. Hubungi via WhatsApp untuk respons cepat atau email untuk diskusi detail.',
+        'Hubungi lewat WhatsApp untuk respons paling cepat, biasanya kami balas dalam 1 jam kerja. Atau kirim email kalau Anda lebih nyaman diskusi lewat tulisan.',
     },
   },
 } as const;

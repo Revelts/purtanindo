@@ -5,8 +5,17 @@ interface SectionProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
-  background?: 'white' | 'gray' | 'gradient';
+  background?: 'white' | 'stone' | 'green' | 'navy' | 'primary' | 'gray';
 }
+
+const backgrounds: Record<NonNullable<SectionProps['background']>, string> = {
+  white:   'bg-canvas',
+  stone:   'bg-stone',
+  green:   'bg-green text-white',
+  navy:    'bg-navy text-white',
+  primary: 'bg-primary text-white',
+  gray:    'bg-stone',
+};
 
 export function Section({
   children,
@@ -14,12 +23,6 @@ export function Section({
   id,
   background = 'white',
 }: SectionProps) {
-  const backgrounds = {
-    white: 'bg-white',
-    gray: 'bg-gray-50',
-    gradient: 'bg-gradient-to-b from-white to-gray-50',
-  };
-
   return (
     <section
       id={id}

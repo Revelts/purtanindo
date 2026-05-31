@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Section, SectionHeading, Card } from '@/components/ui';
+import { Container, Section, SectionHeading } from '@/components/ui';
 import { CONTENT } from '@/constants/content';
+import { FadeUp, StaggerGrid } from '@/components/motion';
 import {
   FaUserTie,
   FaAward,
@@ -12,11 +13,11 @@ import {
 
 const iconMap = {
   expertise: FaUserTie,
-  quality: FaAward,
-  support: FaHeadset,
-  price: FaDollarSign,
-  agile: FaCogs,
-  security: FaShieldAlt,
+  quality:   FaAward,
+  support:   FaHeadset,
+  price:     FaDollarSign,
+  agile:     FaCogs,
+  security:  FaShieldAlt,
 };
 
 export function WhyChooseUsSection() {
@@ -25,27 +26,32 @@ export function WhyChooseUsSection() {
   return (
     <Section id="why-choose-us" background="white">
       <Container>
-        <SectionHeading
-          heading={whyChooseUs.heading}
-          subheading={whyChooseUs.subheading}
-        />
+        <FadeUp>
+          <SectionHeading
+            heading={whyChooseUs.heading}
+            subheading={whyChooseUs.subheading}
+          />
+        </FadeUp>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
           {whyChooseUs.items.map((item, idx) => {
             const Icon = iconMap[item.icon as keyof typeof iconMap];
             return (
-              <Card key={idx} hover>
-                <div className="text-4xl text-brand-start mb-4">
+              <div
+                key={idx}
+                className="bg-stone border border-border rounded-sm p-6 hover:shadow-lift transition-shadow flex flex-col"
+              >
+                <div className="text-accent text-2xl mb-4">
                   <Icon />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="font-display font-semibold text-ink text-lg mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </Card>
+                <p className="text-muted text-sm leading-relaxed">{item.description}</p>
+              </div>
             );
           })}
-        </div>
+        </StaggerGrid>
       </Container>
     </Section>
   );

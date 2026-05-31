@@ -2,9 +2,11 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import {
   HeroSection,
+  BrandPartnersSection,
   ServicesSection,
   WhyChooseUsSection,
 } from '@/components/sections';
+import { AnimatedPage } from '@/components/motion';
 
 // Dynamic import untuk section below-the-fold (lazy loading)
 const CTASection = dynamic(() => import('@/components/sections/CTASection').then(mod => ({ default: mod.CTASection })), {
@@ -21,13 +23,14 @@ const FAQSection = dynamic(() => import('@/components/sections/FAQSection').then
 
 export default function HomePage() {
   return (
-    <>
+    <AnimatedPage>
       <HeroSection />
+      <BrandPartnersSection />
       <ServicesSection />
       <WhyChooseUsSection />
       <CTASection />
       <TestimonialsSection />
       <FAQSection />
-    </>
+    </AnimatedPage>
   );
 }

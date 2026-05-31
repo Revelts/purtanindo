@@ -6,6 +6,7 @@ interface SectionHeadingProps {
   subheading?: string;
   description?: string;
   align?: 'left' | 'center' | 'right';
+  light?: boolean;
   className?: string;
 }
 
@@ -14,6 +15,7 @@ export function SectionHeading({
   subheading,
   description,
   align = 'center',
+  light = false,
   className,
 }: SectionHeadingProps) {
   const alignments = {
@@ -25,15 +27,26 @@ export function SectionHeading({
   return (
     <div className={cn('mb-12', alignments[align], className)}>
       {subheading && (
-        <p className="text-brand-start font-semibold text-sm uppercase tracking-wider mb-2">
+        <p className={cn(
+          'mono-label mb-3',
+          light ? 'text-accent' : 'text-accent'
+        )}>
           {subheading}
         </p>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-        <span className="text-gradient">{heading}</span>
+      <h2 className={cn(
+        'font-display text-3xl md:text-4xl lg:text-5xl display-tight mb-4',
+        light ? 'text-white' : 'text-ink'
+      )}>
+        {heading}
       </h2>
       {description && (
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">{description}</p>
+        <p className={cn(
+          'text-lg max-w-3xl mx-auto leading-relaxed',
+          light ? 'text-white/75' : 'text-muted'
+        )}>
+          {description}
+        </p>
       )}
     </div>
   );

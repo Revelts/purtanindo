@@ -1,22 +1,31 @@
 import Link from 'next/link';
-import { Button, Container } from '@/components/ui';
+import { Container } from '@/components/ui';
+import { AnimatedPage } from '@/components/motion';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
+    <AnimatedPage>
+    <div className="min-h-screen flex items-center justify-center bg-canvas">
       <Container className="text-center py-32">
-        <h1 className="text-9xl font-bold text-gradient mb-4">404</h1>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <p className="mono-label text-accent mb-6">Error 404</p>
+        <h1 className="font-display font-bold text-ink display-tight text-8xl md:text-9xl mb-6">
+          404
+        </h1>
+        <h2 className="font-display font-semibold text-ink text-2xl md:text-3xl display-tight mb-4">
           Halaman Tidak Ditemukan
         </h2>
-        <p className="text-gray-600 mb-8 max-w-md mx-auto">
+        <p className="text-muted mb-10 max-w-md mx-auto text-base leading-relaxed">
           Maaf, halaman yang Anda cari tidak dapat ditemukan. Silakan kembali
           ke beranda atau hubungi kami jika Anda memerlukan bantuan.
         </p>
-        <Link href="/">
-          <Button size="lg">Kembali ke Beranda</Button>
+        <Link
+          href="/"
+          className="inline-flex items-center px-7 py-3.5 rounded-pill bg-primary text-white text-sm font-medium hover:bg-ink transition-colors"
+        >
+          Kembali ke Beranda
         </Link>
       </Container>
     </div>
+    </AnimatedPage>
   );
 }

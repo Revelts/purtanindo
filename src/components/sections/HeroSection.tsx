@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { Button, Container } from '@/components/ui';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { CONTENT } from '@/constants/content';
 import { WHATSAPP_URL } from '@/constants/seo';
+import { EASE, fadeIn, fadeUp } from '@/lib/motion';
 
 export function HeroSection() {
   const { hero } = CONTENT;
@@ -12,43 +13,106 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: 'url(/images/img1.webp)' }}
+      className="bg-canvas pt-[72px] min-h-screen flex items-center overflow-hidden"
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-24">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
 
-      {/* Content */}
-      <Container className="relative z-10 text-center py-32">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-          {hero.heading}
-        </h1>
-        <p className="text-xl md:text-2xl text-white/95 mb-8 max-w-3xl mx-auto">
-          {hero.subheading}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            size="lg"
-            onClick={() => window.open(WHATSAPP_URL, '_blank')}
-          >
-            {hero.cta.primary}
-          </Button>
-          <Link href="/portfolio">
-            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20">
-              {hero.cta.secondary}
-            </Button>
-          </Link>
+          {/* Left — editorial headline */}
+          <div className="lg:col-span-3">
+            <motion.p
+              className="mono-label text-accent mb-6"
+              variants={fadeIn}
+              initial="hidden"
+              animate="visible"
+            >
+              Transformasi Digital
+            </motion.p>
+
+            <motion.h1
+              className="font-display font-bold text-ink display-tight text-5xl sm:text-6xl lg:text-7xl xl:text-8xl mb-8 max-w-2xl"
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.1 }}
+            >
+              {hero.heading}
+            </motion.h1>
+
+            <motion.p
+              className="text-lg text-muted leading-relaxed mb-10 max-w-xl"
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2 }}
+            >
+              {hero.subheading}
+            </motion.p>
+
+            <motion.div
+              className="flex flex-wrap gap-4 items-center"
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.3 }}
+            >
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-7 py-3.5 rounded-pill bg-primary text-white text-sm font-medium hover:bg-ink transition-colors"
+              >
+                {hero.cta.primary}
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Right — overlapping media cards */}
+          <div className="lg:col-span-2 relative hidden lg:block">
+            <div className="relative h-[520px]">
+              {/* Large card */}
+              <motion.div
+                className="absolute top-0 right-0 w-[85%] h-[340px] rounded-card overflow-hidden shadow-lift"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: EASE, delay: 0.15 }}
+              >
+                <Image
+                  src="/images/image-1.webp"
+                  alt="Purtanindo — Solusi Digital"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </motion.div>
+
+              {/* Small card — offset lower-left */}
+              <motion.div
+                className="absolute bottom-0 left-0 w-[60%] h-[220px] rounded-sm overflow-hidden shadow-lift border-4 border-canvas"
+                initial={{ opacity: 0, x: -16, y: 16 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
+              >
+                <Image
+                  src="/images/image-2.webp"
+                  alt="Purtanindo — Tim Profesional"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+
+              {/* Accent dot decoration */}
+              <motion.div
+                className="absolute top-4 left-4 w-3 h-3 rounded-full bg-accent"
+                variants={fadeIn}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.5 }}
+              />
+            </div>
+          </div>
         </div>
-      </Container>
-
-      {/* Wave Bottom */}
-      <div
-        className="absolute bottom-0 left-0 w-full h-28 bg-repeat-x"
-        style={{
-          backgroundImage: 'url(/images/wave.webp)',
-          backgroundSize: '100rem 11rem',
-        }}
-      />
+      </div>
     </section>
   );
 }

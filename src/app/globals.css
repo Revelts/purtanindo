@@ -6,24 +6,68 @@
   * {
     @apply no-underline;
   }
-  
+
   html {
     @apply scroll-smooth;
   }
-  
+
   html,
   body {
     @apply overflow-x-hidden antialiased;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', Inter, ui-sans-serif, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
 }
 
 @layer utilities {
+  /* Gradient text — kept as orange→pink brand accent for select decorative elements */
   .text-gradient {
     @apply bg-gradient-to-r from-[#ffac00] to-[#fd5e79] bg-clip-text text-transparent;
   }
-  
-  .gradient-border {
-    @apply p-[1px] rounded-2xl bg-gradient-to-r from-[#ffac00] to-[#fd5e79];
+
+  /* Display type: tight letter-spacing, compressed line-height */
+  .display-tight {
+    letter-spacing: -0.04em;
+    line-height: 1.0;
+  }
+
+  /* Mono label: small uppercase technical tag */
+  .mono-label {
+    font-family: ui-monospace, 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Dark full-width bands */
+  .band-green {
+    background-color: #003c33;
+    color: #ffffff;
+  }
+
+  .band-primary {
+    background-color: #17171c;
+    color: #ffffff;
+  }
+
+  .band-navy {
+    background-color: #071829;
+    color: #ffffff;
+  }
+
+  /* Pill shape utility */
+  .pill {
+    border-radius: 32px;
+  }
+
+  /* Thin separator rule */
+  .rule {
+    border-top: 1px solid #d9d9dd;
   }
 }
 

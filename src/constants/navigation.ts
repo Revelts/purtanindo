@@ -16,11 +16,6 @@ export const NAV_LINKS: NavLink[] = [
     description: 'Jasa digitalisasi, website & aplikasi',
   },
   {
-    label: 'Portfolio',
-    href: '/portfolio',
-    description: 'Solusi digital yang telah kami wujudkan',
-  },
-  {
     label: 'Tentang Kami',
     href: '/about',
     description: 'Partner bisnis, bukan sekadar vendor',
@@ -35,7 +30,6 @@ export const NAV_LINKS: NavLink[] = [
 export const FOOTER_LINKS = {
   company: [
     { label: 'Tentang Kami', href: '/about' },
-    { label: 'Portfolio', href: '/portfolio' },
     { label: 'Tim Kami', href: '/about#team' },
   ],
   services: [

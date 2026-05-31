@@ -9,11 +9,11 @@ export const EMAIL = 'leynardoyosef@gmail.com';
 export const DEFAULT_METADATA: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Purtanindo - Jasa Pembuatan Website, Aplikasi & Digitalisasi Bisnis',
+    default: 'Purtanindo - Jasa Pembuatan Website, Aplikasi & Digitalisasi Bisnis Jakarta',
     template: '%s | Purtanindo',
   },
   description:
-    'Partner transformasi digital terpercaya untuk UMKM, startup & korporat. Jasa pembuatan website profesional, aplikasi mobile, digitalisasi bisnis, sistem ERP/CRM, dan konsultasi IT. Solusi custom sesuai kebutuhan & budget Anda.',
+    'Jasa pembuatan website profesional, aplikasi mobile, dan digitalisasi bisnis untuk UMKM, startup & korporat Indonesia. Konsultasi gratis, solusi custom, harga transparan, support berkelanjutan. Hubungi kami sekarang.',
   keywords: [
     'jasa pembuatan website',
     'jasa pembuatan aplikasi',
@@ -55,24 +55,15 @@ export const DEFAULT_METADATA: Metadata = {
     locale: 'id_ID',
     url: SITE_URL,
     siteName: COMPANY_NAME,
-    title: 'Purtanindo - Partner Transformasi Digital Bisnis Anda',
+    title: 'Purtanindo - Partner Digitalisasi Bisnis Anda',
     description:
-      'Jasa pembuatan website, aplikasi mobile, dan digitalisasi bisnis untuk UMKM, startup & korporat. Konsultasi gratis, solusi custom, harga transparan.',
-    images: [
-      {
-        url: '/images/purtanindo-colored.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Purtanindo - Jasa Pembuatan Website & Aplikasi Indonesia',
-      },
-    ],
+      'Jasa website, aplikasi mobile, dan sistem digital custom untuk bisnis yang serius tumbuh. Konsultasi gratis, tanpa komitmen.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Purtanindo - Jasa Pembuatan Website & Aplikasi Profesional',
+    title: 'Purtanindo - Jasa Website, Aplikasi & Digitalisasi Bisnis',
     description:
-      'Partner transformasi digital untuk UMKM & korporat. Jasa pembuatan website, aplikasi mobile, dan konsultasi IT profesional.',
-    images: ['/images/purtanindo-colored.webp'],
+      'Partner digitalisasi untuk UMKM, startup & korporat. Jasa pembuatan website profesional, aplikasi mobile, dan konsultasi IT. Konsultasi gratis.',
   },
   robots: {
     index: true,
@@ -92,9 +83,9 @@ export const DEFAULT_METADATA: Metadata = {
 
 export const PAGE_METADATA = {
   home: {
-    title: 'Purtanindo - Jasa Pembuatan Website, Aplikasi & Digitalisasi Bisnis',
+    title: 'Purtanindo - Jasa Website, Aplikasi & Digitalisasi Bisnis | Konsultasi Gratis',
     description:
-      'Partner transformasi digital terpercaya untuk UMKM, startup & korporat. Jasa pembuatan website profesional, aplikasi mobile, digitalisasi bisnis & konsultasi IT. Konsultasi gratis, solusi custom, harga transparan.',
+      'Partner transformasi digital untuk UMKM, startup & korporat. Jasa pembuatan website profesional, aplikasi mobile, sistem ERP/CRM & konsultasi IT. Solusi custom, harga transparan. Konsultasi gratis sekarang.',
     keywords: [
       'jasa pembuatan website',
       'jasa pembuatan aplikasi',
@@ -105,9 +96,9 @@ export const PAGE_METADATA = {
     ],
   },
   services: {
-    title: 'Layanan Jasa Digitalisasi, Website & Aplikasi Profesional',
+    title: 'Layanan Jasa Website, Aplikasi & Digitalisasi Bisnis - Purtanindo',
     description:
-      'Layanan lengkap: Jasa pembuatan website company profile & e-commerce, aplikasi mobile Android/iOS, digitalisasi bisnis (ERP/CRM), dan konsultasi IT. Solusi yang disesuaikan dengan kebutuhan & budget bisnis Anda.',
+      'Jasa pembuatan website company profile & e-commerce, aplikasi mobile Android/iOS, sistem ERP/CRM, dan konsultasi IT. Semua custom sesuai kebutuhan bisnis Anda. Estimasi gratis & transparan.',
     keywords: [
       'jasa pembuatan website profesional',
       'jasa pembuatan aplikasi mobile',
@@ -117,22 +108,10 @@ export const PAGE_METADATA = {
       'konsultasi IT',
     ],
   },
-  portfolio: {
-    title: 'Portfolio Transformasi Digital - Solusi Nyata untuk Bisnis',
-    description:
-      'Lihat hasil kerja kami: Website profesional, aplikasi mobile, dan sistem digitalisasi yang telah membantu UMKM hingga korporat meningkatkan efisiensi dan revenue. Lebih dari sekadar teknologi, ini tentang hasil bisnis.',
-    keywords: [
-      'portfolio website',
-      'portfolio aplikasi',
-      'studi kasus digitalisasi',
-      'contoh website profesional',
-      'contoh aplikasi bisnis',
-    ],
-  },
   about: {
-    title: 'Tentang Purtanindo - Partner Digital Transformation Anda',
+    title: 'Tentang Purtanindo - Partner Digital Transformation, Bukan Sekadar Vendor',
     description:
-      'Purtanindo adalah partner transformasi digital yang memahami tantangan bisnis. Bukan sekadar vendor teknologi—kami adalah konsultan yang fokus pada solusi dan hasil. Tim berpengalaman siap bantu bisnis Anda bertumbuh.',
+      'Purtanindo adalah partner transformasi digital yang fokus pada hasil bisnis nyata. Tim berpengalaman, pendekatan konsultatif, support jangka panjang. Kenali kami lebih dekat.',
     keywords: [
       'tentang purtanindo',
       'software house terpercaya',
@@ -141,9 +120,9 @@ export const PAGE_METADATA = {
     ],
   },
   contact: {
-    title: 'Hubungi Kami - Konsultasi Digitalisasi Gratis',
+    title: 'Konsultasi Gratis - Hubungi Purtanindo Sekarang',
     description:
-      'Mulai transformasi digital bisnis Anda sekarang. Konsultasi GRATIS tanpa komitmen. Ceritakan tantangan bisnis Anda, kami bantu carikan solusi terbaik. Hubungi via WhatsApp untuk respons cepat.',
+      'Konsultasi gratis tanpa komitmen. Ceritakan tantangan bisnis Anda, kami respond dalam 1 jam kerja dengan rekomendasi solusi terbaik. Chat WhatsApp atau kirim email.',
     keywords: [
       'konsultasi IT gratis',
       'kontak purtanindo',

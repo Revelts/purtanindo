@@ -1,0 +1,14 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - img "SanDisk" [ref=e7]
+    - generic [ref=e9]: Your browser does not support the video tag.
+    - generic [ref=e10]:
+      - generic [ref=e11]: Siapa nama kamu? *
+      - textbox "Siapa nama kamu? *" [active] [ref=e12]:
+        - /placeholder: Masukkan nama kamu
+      - button "Lanjutkan →" [disabled] [ref=e14]: Lanjutkan →
+      - paragraph [ref=e16]:
+        - generic [ref=e17]: ⏱️
+        - generic [ref=e18]: Tonton video sampai selesai untuk melanjutkan
+    - paragraph [ref=e19]: Nama kamu akan muncul di hasil test untuk personalisasi
+  - alert [ref=e20]

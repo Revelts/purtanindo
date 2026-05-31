@@ -1,53 +1,69 @@
 'use client';
 
 import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Container, Section, SectionHeading } from '@/components/ui';
+import { FadeUp } from '@/components/motion';
 import { CONTENT } from '@/constants/content';
-import { FiPlus, FiMinus } from 'react-icons/fi';
+import { EASE } from '@/lib/motion';
 
 export function FAQSection() {
   const { faq } = CONTENT;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index: number) => {
+  const toggle = (index: number) =>
     setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
-    <Section id="faq" background="white">
+    <Section id="faq" background="stone">
       <Container size="md">
-        <SectionHeading
-          heading={faq.heading}
-          subheading={faq.subheading}
-        />
+        <FadeUp>
+          <SectionHeading
+            heading={faq.heading}
+            subheading={faq.subheading}
+          />
+        </FadeUp>
 
-        <div className="space-y-4">
+        <div className="border-t border-border">
           {faq.items.map((item, idx) => (
-            <div
-              key={idx}
-              className="border border-gray-200 rounded-lg overflow-hidden"
-            >
-              <button
-                onClick={() => toggleFAQ(idx)}
-                className="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors"
-              >
-                <h3 className="font-semibold text-gray-900 pr-4">
-                  {item.question}
-                </h3>
-                <div className="text-brand-start flex-shrink-0">
-                  {openIndex === idx ? (
-                    <FiMinus className="text-xl" />
-                  ) : (
-                    <FiPlus className="text-xl" />
+            <FadeUp key={idx} delay={idx * 0.05}>
+              <div className="border-b border-border">
+                <button
+                  onClick={() => toggle(idx)}
+                  className="w-full flex items-center justify-between py-5 text-left"
+                >
+                  <h3 className="font-medium text-ink pr-6 text-base">
+                    {item.question}
+                  </h3>
+                  <motion.span
+                    animate={{ rotate: openIndex === idx ? 45 : 0 }}
+                    transition={{ duration: 0.2, ease: EASE }}
+                    className="text-muted flex-shrink-0 text-lg leading-none"
+                  >
+                    +
+                  </motion.span>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {openIndex === idx && (
+                    <motion.div
+                      key="answer"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.28, ease: EASE }}
+                      style={{ overflow: 'hidden' }}
+                    >
+                      <div className="pb-5">
+                        <p className="text-muted text-sm leading-relaxed">
+                          {item.answer}
+                        </p>
+                      </div>
+                    </motion.div>
                   )}
-                </div>
-              </button>
-              {openIndex === idx && (
-                <div className="px-5 pb-5 bg-gray-50">
-                  <p className="text-gray-700">{item.answer}</p>
-                </div>
-              )}
-            </div>
+                </AnimatePresence>
+              </div>
+            </FadeUp>
           ))}
         </div>
       </Container>
