@@ -184,10 +184,10 @@ export const CONTENT = {
     heading: 'Brand Partners',
     subheading: 'Dipercaya oleh berbagai brand',
     partners: [
-      { name: 'Juragan Apart', logo: '/partners/juraganapart.png', sizeClass: '' },
-      { name: 'Mamaca', logo: '/partners/mamaca.png', sizeClass: '' },
-      { name: 'SanDisk', logo: '/partners/sandisk.webp', sizeClass: 'h-8 w-auto' },
-      { name: 'Tempo', logo: '/partners/tempo.webp', sizeClass: 'h-8 w-auto' },
+      { name: 'Juragan Apart', logo: '/partners/juraganapart.png', sizeClass: '', href: 'https://juraganapart.id' },
+      { name: 'Mamaca', logo: '/partners/mamaca.png', sizeClass: '', href: 'https://mamaca.id' },
+      { name: 'SanDisk', logo: '/partners/sandisk.webp', sizeClass: 'h-8 w-auto', href: 'https://sandisktechshift.com' },
+      { name: 'Tempo', logo: '/partners/tempo.webp', sizeClass: 'h-8 w-auto', href: 'https://tempo.co/bestemployers2026' },
     ],
   },
 
